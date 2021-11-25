@@ -7,6 +7,9 @@ public class Shroom : MonoBehaviour
     public int mushroomLife = 3;    // Life point of a mushroom
     public int scoreMushroom = 15;  // Score of each mushroom when the player shot down
     private PlayerMoves playerInfo;      // Player information
+    public bool shroomDmg;            //for the animator to get the shrooms damage
+    public Animator anime;              //for the animation
+    public SpriteRenderer spriti;          //renders sprites
 
     void Start()
     {
