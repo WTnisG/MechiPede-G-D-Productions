@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class highscoreSafer : MonoBehaviour
 {
+    /*
     public PlayerMoves pL;        //player script gets fetched
     public int scoreSafe;        //score is gicen into this script
     public Text highscoreData;  //shows the highscore after GameOver
@@ -29,4 +30,5 @@ public class highscoreSafer : MonoBehaviour
             highscoreData.text = scoreSafe.ToString();
         }
     }
+    */
 }

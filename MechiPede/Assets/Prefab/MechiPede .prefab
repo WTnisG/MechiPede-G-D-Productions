@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 505994837746235636}
   - component: {fileID: 4071454535003446335}
   - component: {fileID: 6060689779270888273}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: 'MechiPede '
   m_TagString: Centipede
   m_Icon: {fileID: 0}
@@ -54,6 +54,10 @@ MonoBehaviour:
   centipedeSpeed: 5
   direction: {x: 0, y: 0, z: 0}
   gamerCon: {fileID: 0}
+  pedeHead: 0
+  pedeLeg: 0
+  anim: {fileID: 0}
+  sprite: {fileID: 0}
 --- !u!212 &505994837746235636
 SpriteRenderer:
   m_ObjectHideFlags: 0

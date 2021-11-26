@@ -7,10 +7,10 @@ TagManager:
   - Wall
   - Down
   - Top
-  - Mushroom
-  - Centipede
   - Bullet
+  - Centipede
   - CentiHead
+  - Mushroom
   layers:
   - Default
   - TransparentFX
@@ -18,8 +18,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - game
+  - Player
   - 
   - 
   - 

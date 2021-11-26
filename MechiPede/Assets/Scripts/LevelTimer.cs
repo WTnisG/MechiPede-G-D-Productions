@@ -24,7 +24,7 @@ public class LevelTimer : MonoBehaviour
         levelTxt.text = ((int)gameLength).ToString();
         GameObject[] MechiPede = GameObject.FindGameObjectsWithTag("Centipede");
 
-        if (MechiPede.Length <= 0 || gameLength <= 0)  //switches Level
+        if (MechiPede.Length < 0 || gameLength <= 0)  //switches Level
         {
             SceneManager.LoadScene(levelName);
         }
