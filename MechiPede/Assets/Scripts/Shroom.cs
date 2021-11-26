@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Shroom : MonoBehaviour
 {
+
+    Animator anim;                      //Sets Animator up
+
     public int mushroomLife = 3;    // Life point of a mushroom
     public int scoreMushroom = 15;  // Score of each mushroom when the player shot down
     private PlayerMoves playerInfo;      // Player information
+    
 
     void Start()
     {
+        anim = GetComponent<Animator>();                                        //Fetches Animator Component
         playerInfo = GameObject.Find("Player").GetComponent<PlayerMoves>();
     }
 
@@ -30,6 +35,7 @@ public class Shroom : MonoBehaviour
         if (col.gameObject.CompareTag("Bullet"))
         {
             this.mushroomLife--;
+            anim.SetInteger("MushroomLife", mushroomLife);                          //Gives Integer to Animator
         }
     }
 }
