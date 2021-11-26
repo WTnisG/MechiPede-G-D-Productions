@@ -20,10 +20,15 @@ public class PlayerMoves : MonoBehaviour
     private Vector2 moves;                  //Creates movement in combination with Axis.
     public int score = 0;                   //Score of the player
     public int pLive = 3;                  //Player lives
+    public string giveScore;        //Test
     public Text lifeTxt;            //Shows remaining lives in UI
     public Text scoreTxt;           //Shows points in UI
     private Scene scene;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +49,6 @@ public class PlayerMoves : MonoBehaviour
             if(pLive <= 0)
             {
                 GameOverPlayer();
-                Destroy(gameObject);
             }
             else
             {
@@ -113,5 +117,11 @@ public class PlayerMoves : MonoBehaviour
     public void GameWinLoad()
     {
          SceneManager.LoadScene("GameWin");
+    }
+
+    public string GiveScore()
+    {
+        giveScore = score.ToString();
+        return giveScore;
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: GroundTextureStoneGrassLeft
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: cb7c92e6ad55a504b8ed252a3f9b1696, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d1e4fcb7d590bb4c9380b805853e67a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

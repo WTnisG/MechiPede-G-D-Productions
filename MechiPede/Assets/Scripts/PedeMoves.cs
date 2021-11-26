@@ -18,10 +18,6 @@ public class PedeMoves : MonoBehaviour
     private GridGeneration gridInfo;                    // Grid and scene generation information
     private PlayerMoves playerInfo;                    // Player information
     public GameController gamerCon;                     //gameController is here for giving Speed
-    public bool pedeHead;                               //to determin the pedes head
-    public float pedeLeg;                               //to determin the pedes leg placement
-    public Animator anim;                               //to animate sprites
-    public SpriteRenderer sprite;                       //to render sprites
 
     // Start is called before the first frame update
     void Start()
