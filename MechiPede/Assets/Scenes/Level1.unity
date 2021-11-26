@@ -10850,7 +10850,7 @@ MonoBehaviour:
   masterSpeed: 3
   checkScene:
     m_Handle: 0
-  maxLevel: 30
+  maxLevel: 10
 --- !u!4 &973953867
 Transform:
   m_ObjectHideFlags: 0
