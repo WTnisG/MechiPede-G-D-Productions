@@ -6,11 +6,38 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 758471071f313df43a01680c8e4d9d76
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: f9e9f5e75bc46f34896676e96986575c
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 9808dfd2b6db4464ba3d02676ebe6d13
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 93e829d5a9a34d243903a576b571f65e
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: fa00ec9614606aa44abf4fe8accbd085
+  - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: 93381f7f8df170c46afcec2b16719c39
+  - enabled: 1
+    path: Assets/Scenes/Level6.unity
+    guid: 9232938439f0df8429bd54e0003a0a84
+  - enabled: 1
+    path: Assets/Scenes/Level7.unity
+    guid: a5d6a7c2f08f9964b823e84805dd705d
+  - enabled: 1
+    path: Assets/Scenes/Level8.unity
+    guid: 944c4494b9c236146ba2605e0ed948e0
+  - enabled: 1
+    path: Assets/Scenes/Level9.unity
+    guid: ac7c1efaf3331164bab22da182c4f4c3
+  - enabled: 1
+    path: Assets/Scenes/Level10.unity
+    guid: 31a75af3f76b04e449b9a036f4bdee85
   - enabled: 1
     path: Assets/Scenes/GameLost.unity
     guid: 9a734d7316621b947965af4f5d51101c

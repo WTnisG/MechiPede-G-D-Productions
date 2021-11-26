@@ -79,7 +79,7 @@ public class PlayerMoves : MonoBehaviour
         ShowScore();
         GameObject[] MechiPede = GameObject.FindGameObjectsWithTag("Centipede");
 
-        if(MechiPede.Length <= 0 && scene.name == "Level15")
+        if(MechiPede.Length <= 0 && scene.name == "Level10")
         {
             GameWinLoad();
         }
