@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 505994837746235636}
   - component: {fileID: 4071454535003446335}
   - component: {fileID: 6060689779270888273}
+  - component: {fileID: 4974529547446282770}
   m_Layer: 10
   m_Name: 'MechiPede '
   m_TagString: Centipede
@@ -46,13 +47,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff4ae4d49b5a974195122a06bd8c1e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectionRadius: 1
   isCollide: 0
   isDown: 0
   isRight: 0
+  isHead: 0
   order: 0
   scoreCentipede: 50
   centipedeSpeed: 5
   direction: {x: 0, y: 0, z: 0}
+  gamerCon: {fileID: 0}
 --- !u!212 &505994837746235636
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -141,3 +145,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.15673032
+--- !u!95 &4974529547446282770
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5081341970001424715}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 965447142eb8da849a7f55e8db6341f3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

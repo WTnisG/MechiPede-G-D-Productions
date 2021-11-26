@@ -5,19 +5,30 @@ using UnityEngine;
 
 public class PedeMoves : MonoBehaviour
 {
+    //Testpurpose
+    [SerializeField] float detectionRadius;
+
+
     public bool isCollide;                              // Boolean determining whether the centipede hits something
     public bool isDown;                                 // Boolean determining the direction (Top -> Bottom OR Bottom -> Top)
     public bool isRight;                                // Boolean determining the direction (Left -> Right OR Right -> Left)
+    public bool isHead;                                 // Boolean determining if Segment is a Head
     public int order;                                   // Order of the centipede
     public int scoreCentipede = 50;                     // Score of each centipede when the player shot
     public float centipedeSpeed = 1000f;                // Speed that the centipede can travel in cells per second
     public Vector3 direction;                           // Current direction of the centipede
+
 
     private float nextMove = 0;                         // Time the centipede can move to the next cell
     private Rigidbody2D rb;                             // Rigidbody of the centipede object
     private GridGeneration gridInfo;                    // Grid and scene generation information
     private PlayerMoves playerInfo;                    // Player information
     public GameController gamerCon;                     //gameController is here for giving Speed
+    private Animator anim;                             //Sets up Animator
+
+    private Vector2 startCast;
+    private Vector2 endCast;
+    private RaycastHit2D detect;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +43,7 @@ public class PedeMoves : MonoBehaviour
         gridInfo = GameObject.Find("Background").GetComponent<GridGeneration>();
         playerInfo = GameObject.Find("Player").GetComponent<PlayerMoves>();
         gamerCon = GameObject.Find("GameController").GetComponent<GameController>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -39,6 +51,7 @@ public class PedeMoves : MonoBehaviour
     {
         // Determine the direction of the centipede before moving
         CheckMovable(direction);
+        CheckSurroundings();
         CentipedeMove();
         PedeSpeed();
     }
@@ -124,6 +137,41 @@ public class PedeMoves : MonoBehaviour
                     isDown = isDown == true ? false : true;
                 }
         }
+    }
+
+    void CheckSurroundings()
+    {
+        Vector2 segmentCurrentPos = transform.position;
+        startCast = segmentCurrentPos;
+        endCast = segmentCurrentPos;
+
+
+        if (isRight == false)
+        {
+            startCast.x -= detectionRadius;
+        }
+        else if (isRight == true)
+        {
+            endCast.x += detectionRadius;
+        }
+        else
+        {
+            Debug.LogWarning("CheckSurroundings Method Failed!");
+        }
+        
+        Debug.DrawLine(startCast, endCast, Color.red);
+        detect = Physics2D.Linecast(startCast, endCast);
+
+        if(detect == true)
+        {
+            isHead = false;
+        }
+        else
+        {
+            isHead = true;
+        }
+
+        anim.SetBool("IsHead", isHead);
     }
 
     void OnTriggerEnter2D(Collider2D col)
